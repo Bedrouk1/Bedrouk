@@ -35,7 +35,11 @@ BEDROUK is a bilingual personal portfolio with a dedicated Machine Learning lear
 - 🌍 Persian and English interface
 - 📱 Responsive layout for desktop and mobile
 - ✨ Smooth transitions and scroll-based reveal effects
-- 🧠 Dedicated Machine Learning Academy
+- 🧠 Dedicated Machine Learning Academy with beginner-friendly explanations
+- ∑ Mathematical formulas explained symbol by symbol
+- 🎞️ Animated visual walkthroughs for each core concept and algorithm
+- 🧭 Step-by-step interactive lesson diagrams
+- 📚 Clear academy entry point on the main portfolio page
 - 💻 Python examples presented in a code-focused learning layout
 - 📖 Lessons, explanations, and key learning notes
 
