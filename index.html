@@ -325,6 +325,86 @@ footer{margin-top:12px}
 @media(max-width:700px){.visual-gallery{grid-template-columns:1fr;gap:12px;margin:38px 0 8px}.visual-tile{min-height:205px}.visual-gallery .visual-tile:nth-child(n){transition-delay:0s}}
 @media(prefers-reduced-motion:reduce){.visual-tile img,.ai-tree .tree-level{transition:none!important;animation:none!important}.visual-tile:hover img{transform:none}}
 
+
+/* Color-rich visual identity and cinematic contact experience */
+:root{--electric:#638cff;--violet:#a78bfa;--coral:#ff8a72;--lime:#b8ed79;--aqua:#50e5d0}
+body:before{background:
+ radial-gradient(ellipse at 8% 16%,#a78bfa20,transparent 32%),
+ radial-gradient(ellipse at 92% 24%,#50e5d018,transparent 30%),
+ radial-gradient(ellipse at 78% 78%,#ff8a7210,transparent 28%),
+ radial-gradient(ellipse at 22% 88%,#638cff12,transparent 30%)}
+.gradient-text{background-image:linear-gradient(100deg,#fff 0%,#a78bfa 28%,#50e5d0 58%,#ff9b83 82%,#fff 100%);background-size:220% auto;animation:gradientFlow 9s linear infinite}
+@keyframes gradientFlow{to{background-position:220% center}}
+.brand-mark{background:linear-gradient(135deg,var(--aqua),var(--violet),var(--coral));box-shadow:0 0 25px #a78bfa88}
+.topbar{border-image:linear-gradient(90deg,#50e5d055,#a78bfa88,#ff8a7255) 1}
+.card:nth-child(3n+1){--glow:#a78bfa}.card:nth-child(3n+2){--glow:#50e5d0}.card:nth-child(3n){--glow:#ff8a72}
+.card:nth-child(3n+2) .card-icon{background:#50e5d01c;color:#50e5d0}
+.card:nth-child(3n) .card-icon{background:#ff8a721c;color:#ff9b83}
+.section-head .eyebrow{color:var(--coral)}
+.visual-tile{border-color:#ffffff24;box-shadow:0 20px 55px #0005, inset 0 0 35px #a78bfa0a}
+.visual-tile:before{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(115deg,transparent 25%,#ffffff0b 48%,transparent 68%);background-size:220% 100%;animation:tileShine 8s ease-in-out infinite;pointer-events:none}
+@keyframes tileShine{0%,45%{background-position:150% 0}75%,100%{background-position:-100% 0}}
+.image-orb{border-color:#ffffff66;box-shadow:0 0 30px #a78bfa66}
+.btn.primary{background-image:linear-gradient(110deg,#765cf5,#4b9fff 45%,#27cbb8 75%,#765cf5);background-size:250% 100%;animation:buttonFlow 8s linear infinite}
+@keyframes buttonFlow{to{background-position:250% 0}}
+.tree-level:nth-child(1){--level:#a78bfa!important}.tree-level:nth-child(2){--level:#50e5d0!important}.tree-level:nth-child(3){--level:#ff8a72!important}.tree-level:nth-child(4){--level:#b8ed79!important}
+.contact-page{position:relative;isolation:isolate}
+.contact-scene{position:relative;min-height:590px;display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:clamp(30px,7vw,90px);padding:42px clamp(12px,4vw,48px);border:1px solid #ffffff12;border-radius:34px;overflow:hidden;background:linear-gradient(135deg,#11172aee,#0b1421ed 55%,#171126ee);box-shadow:0 30px 90px #0005}
+.contact-scene:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.24;background-image:linear-gradient(#ffffff0b 1px,transparent 1px),linear-gradient(90deg,#ffffff0b 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(135deg,#000,transparent 80%)}
+.contact-scene:after{content:"";position:absolute;z-index:-1;width:540px;height:540px;right:25%;top:5%;border:1px solid #a78bfa20;border-radius:50%;box-shadow:0 0 0 35px #50e5d008,0 0 0 80px #ff8a7206;animation:slowOrbit 30s linear infinite}
+@keyframes slowOrbit{to{transform:rotate(360deg)}}
+.contact-orb{position:absolute;z-index:-1;border-radius:50%;filter:blur(2px);pointer-events:none}
+.orb-a{width:230px;height:230px;right:-90px;top:-100px;background:#a78bfa25;filter:blur(55px);animation:orbDrift 10s ease-in-out infinite alternate}
+.orb-b{width:190px;height:190px;left:30%;bottom:-110px;background:#50e5d020;filter:blur(60px);animation:orbDrift 12s ease-in-out infinite alternate-reverse}
+.orb-c{width:120px;height:120px;left:-60px;top:40%;background:#ff8a7220;filter:blur(50px);animation:orbDrift 8s ease-in-out infinite alternate}
+@keyframes orbDrift{from{transform:translate3d(0,0,0) scale(.9)}to{transform:translate3d(18px,-22px,0) scale(1.12)}}
+.contact-intro{position:relative;z-index:2}
+.contact-kicker{display:flex;align-items:center;gap:10px;margin:35px 0 10px;color:#b8ed79;font:10px "DM Mono";letter-spacing:1.2px}
+.kicker-line{width:34px;height:1px;background:linear-gradient(90deg,#b8ed79,transparent)}
+.contact-intro h2{font-size:clamp(34px,5vw,57px);line-height:1.5;margin:8px 0 18px}
+.contact-gradient{background:linear-gradient(90deg,#a78bfa,#50e5d0,#ff9b83);background-clip:text;-webkit-background-clip:text;color:transparent}
+.contact-intro>p{max-width:420px;color:#a1abc0;font-size:14px;line-height:2.2}
+.contact-status{display:flex;align-items:center;gap:10px;margin-top:32px;color:#9aa8ba;font-size:11px}
+.contact-status i{width:8px;height:8px;border-radius:50%;background:#b8ed79;box-shadow:0 0 15px #b8ed79;animation:statusPulse 1.8s ease-in-out infinite}
+@keyframes statusPulse{50%{box-shadow:0 0 3px #b8ed79;opacity:.55}}
+.contact-status b{margin-right:auto;color:#b8ed79;font:10px "DM Mono";letter-spacing:1px}
+.contact-stamp{display:flex;align-items:center;gap:12px;margin-top:45px;opacity:.65}
+.contact-stamp>span{width:48px;height:48px;display:grid;place-items:center;border:1px solid #a78bfa88;border-radius:50%;color:#c4b5fd;font:13px "DM Mono";box-shadow:0 0 25px #a78bfa22}
+.contact-stamp small{color:#8794aa;font:9px/1.6 "DM Mono";letter-spacing:1px}
+.contact-panel{position:relative;z-index:2;padding:clamp(18px,3vw,30px);border:1px solid #ffffff20;border-radius:25px;background:#0a1020a8;backdrop-filter:blur(18px);box-shadow:0 25px 70px #0005}
+.contact-panel-head,.contact-panel-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;color:#8996ac;font:10px "DM Mono";letter-spacing:1px}
+.panel-index{color:#a78bfa}
+.channel-card{position:relative;display:flex;align-items:center;gap:15px;margin-top:13px;padding:17px 15px;border:1px solid #ffffff13;border-radius:18px;background:linear-gradient(110deg,#ffffff08,#ffffff02);overflow:hidden;transition:transform .35s var(--ease),border-color .35s,background .35s,box-shadow .35s}
+.channel-card:before{content:"";position:absolute;inset:0;transform:translateX(110%);background:linear-gradient(100deg,transparent,#ffffff10,transparent);transition:transform .7s}
+.channel-card:hover{transform:translateX(-7px);box-shadow:0 12px 35px #0004}
+.channel-card:hover:before{transform:translateX(-110%)}
+.channel-icon{width:48px;height:48px;flex:none;display:grid;place-items:center;border-radius:15px;background:#a78bfa18;color:#c4b5fd}
+.channel-icon svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.channel-copy{min-width:0;display:grid;gap:3px}
+.channel-copy small{font:9px "DM Mono";letter-spacing:.7px;color:#8492a9}
+.channel-copy b{font:13px "DM Mono",var(--font);color:#e9edfa;overflow-wrap:anywhere}
+.channel-copy em{font-style:normal;font-size:10px;color:#8d9aaf}
+.channel-arrow{margin-right:auto;flex:none;color:#aab6cb;font:19px "DM Mono";transition:transform .3s,color .3s}
+.channel-card:hover .channel-arrow{transform:translate(3px,-3px);color:#fff}
+.channel-email:hover{border-color:#a78bfa88;background:#a78bfa12}.channel-email .channel-icon{background:#a78bfa20;color:#c4b5fd}
+.channel-telegram:hover{border-color:#50e5d088;background:#50e5d012}.channel-telegram .channel-icon{background:#50e5d020;color:#50e5d0}
+.channel-github:hover{border-color:#ff8a7288;background:#ff8a7212}.channel-github .channel-icon{background:#ff8a721c;color:#ff9b83}
+.contact-panel-foot{margin-top:20px;padding-top:16px;border-top:1px solid #ffffff12}
+.signal-bars{height:14px;display:flex;align-items:end;gap:3px}
+.signal-bars i{width:3px;border-radius:4px;background:#50e5d0;animation:signal 1s ease-in-out infinite alternate}
+.signal-bars i:nth-child(1){height:5px}.signal-bars i:nth-child(2){height:10px;animation-delay:.2s}.signal-bars i:nth-child(3){height:7px;animation-delay:.4s}.signal-bars i:nth-child(4){height:13px;animation-delay:.1s}.signal-bars i:nth-child(5){height:8px;animation-delay:.3s}
+@keyframes signal{to{height:3px;opacity:.45}}
+.contact-bottom{position:relative;display:flex;align-items:center;gap:16px;margin-top:22px;padding:17px 22px;border:1px solid #ffffff12;border-radius:16px;background:linear-gradient(90deg,#a78bfa0d,#50e5d00d,#ff8a720d);overflow:hidden}
+.contact-bottom span:first-child{color:#a78bfa;font:9px "DM Mono";letter-spacing:1px}
+.contact-bottom b{font:10px "DM Mono";color:#9ba8bb;letter-spacing:.5px}
+.contact-bottom-mark{margin-right:auto;color:#50e5d0;font-size:20px;animation:markSpin 12s linear infinite}
+@keyframes markSpin{to{transform:rotate(360deg)}}
+.contact-page .reveal{transform:translateY(22px) scale(.985);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.contact-page .reveal.visible{transform:none}
+@media(max-width:850px){.contact-scene{grid-template-columns:1fr;gap:30px;padding:32px 22px}.contact-intro h2{font-size:clamp(34px,8vw,48px)}.contact-stamp{margin-top:25px}.contact-scene:after{right:0;top:20%}}
+@media(max-width:620px){.contact-scene{padding:27px 16px;border-radius:24px;gap:25px}.contact-kicker{margin-top:25px}.contact-panel{padding:15px 12px}.channel-card{gap:11px;padding:14px 11px}.channel-icon{width:42px;height:42px}.channel-copy b{font-size:11px}.channel-copy small{font-size:8px}.channel-copy em{font-size:9px}.contact-bottom{align-items:flex-start;flex-direction:column;gap:5px}.contact-bottom-mark{position:absolute;left:16px;top:14px}}
+@media(prefers-reduced-motion:reduce){.gradient-text,.visual-tile:before,.contact-scene:after,.contact-orb,.contact-status i,.signal-bars i,.contact-bottom-mark{animation:none!important}.channel-card:hover{transform:none}}
+
 </style>
 </head>
 <body>
@@ -459,14 +539,38 @@ footer{margin-top:12px}
  </div>
  <div class="actions" style="margin-top:30px"><a class="btn primary" href="https://github.com/Bedrouk1" target="_blank" rel="noopener noreferrer">مشاهده GitHub <span class="arrow">↗</span></a></div>
 </section>
-<section class="page" data-page="contact">
- <div class="contact-box reveal"><span class="eyebrow">LET'S CONNECT</span><h2>راه‌های ارتباطی</h2><p class="lead" style="margin:0 auto">برای گفت‌وگو درباره برنامه‌نویسی، هوش مصنوعی یا پروژه‌ها از راه‌های زیر پیام بده.</p>
-  <div class="contact-details">
-   <a href="mailto:bedroukx@gmail.com"><span>ایمیل</span><b dir="ltr">bedroukx@gmail.com</b></a>
-   <a href="https://t.me/Bedr0uk" target="_blank" rel="noopener noreferrer"><span>تلگرام</span><b dir="ltr">@Bedr0uk</b></a>
-   <a href="https://github.com/Bedrouk1" target="_blank" rel="noopener noreferrer"><span>گیت‌هاب</span><b dir="ltr">Bedrouk1</b></a>
+<section class="page contact-page" data-page="contact">
+ <div class="contact-scene">
+  <div class="contact-orb orb-a"></div><div class="contact-orb orb-b"></div><div class="contact-orb orb-c"></div>
+  <div class="contact-intro reveal">
+   <span class="eyebrow">OPEN CHANNEL / 06</span>
+   <div class="contact-kicker"><span class="kicker-line"></span> LET'S MAKE SOMETHING GREAT</div>
+   <h2>یک ایده داری؟<br><span class="contact-gradient">از همین‌جا شروع کنیم.</span></h2>
+   <p>برای صحبت درباره برنامه‌نویسی، هوش مصنوعی، پروژه‌ها یا همکاری، یکی از راه‌های ارتباطی را انتخاب کن.</p>
+   <div class="contact-status"><i></i><span>کانال‌های ارتباطی فعال هستند</span><b>ONLINE</b></div>
+   <div class="contact-stamp"><span>BDK</span><small>CONNECT<br>BEYOND IDEAS</small></div>
+  </div>
+  <div class="contact-panel reveal">
+   <div class="contact-panel-head"><span>CHOOSE YOUR CHANNEL</span><span class="panel-index">01 — 03</span></div>
+   <a class="channel-card channel-email" href="mailto:bedroukx@gmail.com">
+    <span class="channel-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></span>
+    <span class="channel-copy"><small>EMAIL / DIRECT MESSAGE</small><b dir="ltr">bedroukx@gmail.com</b><em>برای پیام‌های رسمی و پروژه‌ها</em></span>
+    <span class="channel-arrow">↗</span>
+   </a>
+   <a class="channel-card channel-telegram" href="https://t.me/Bedr0uk" target="_blank" rel="noopener noreferrer">
+    <span class="channel-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 3-7.2 18-3.9-7.1L3 10.2 21 3Z"/><path d="m9.9 13.9 4.8-4.8"/></svg></span>
+    <span class="channel-copy"><small>TELEGRAM / QUICK CHAT</small><b dir="ltr">@Bedr0uk</b><em>برای گفت‌وگوی سریع‌تر</em></span>
+    <span class="channel-arrow">↗</span>
+   </a>
+   <a class="channel-card channel-github" href="https://github.com/Bedrouk1" target="_blank" rel="noopener noreferrer">
+    <span class="channel-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.9-2.7c3-.3 6.1-1.5 6.1-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6S17.5 1.2 15 3.1a13.2 13.2 0 0 0-7 0C5.5 1.2 4.3 1.5 4.3 1.5a4.8 4.8 0 0 0-.1 3.6A5.2 5.2 0 0 0 2.8 8.7c0 5.2 3.1 6.4 6.1 6.7A3.4 3.4 0 0 0 8 18.1V22"/></svg></span>
+    <span class="channel-copy"><small>GITHUB / CODE & PROJECTS</small><b dir="ltr">Bedrouk1</b><em>برای دیدن کدها و پروژه‌ها</em></span>
+    <span class="channel-arrow">↗</span>
+   </a>
+   <div class="contact-panel-foot"><span>NO SPAM · JUST GOOD IDEAS</span><span class="signal-bars"><i></i><i></i><i></i><i></i><i></i></span></div>
   </div>
  </div>
+ <div class="contact-bottom reveal"><span>HAVE A PROJECT IN MIND?</span><b>GOOD THINGS START WITH A CONVERSATION.</b><span class="contact-bottom-mark">✳</span></div>
 </section>
 </main>
 <footer>
