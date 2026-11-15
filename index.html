@@ -227,6 +227,31 @@ body{overscroll-behavior-x:none}
  .page.active,.reveal,.reveal.visible{animation:none!important;transition:none!important;transform:none!important;filter:none!important}
 }
 
+
+/* Intentional motion: one-shot entrances and interaction feedback, never layout jitter */
+@keyframes heroEnter{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes visualEnter{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+@keyframes accentSweep{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+.page.active .hero-copy{animation:heroEnter .72s cubic-bezier(.2,.8,.2,1) both}
+.page.active .visual{animation:visualEnter .85s .08s cubic-bezier(.2,.8,.2,1) both}
+.page.active .hero-copy .eyebrow{animation:heroEnter .6s ease both}
+.page.active .hero-copy h1{animation:heroEnter .72s .08s cubic-bezier(.2,.8,.2,1) both}
+.page.active .hero-copy .lead{animation:heroEnter .72s .16s cubic-bezier(.2,.8,.2,1) both}
+.page.active .hero-copy .actions{animation:heroEnter .72s .24s cubic-bezier(.2,.8,.2,1) both}
+.page.active .cards .reveal:nth-child(2){transition-delay:.08s}
+.page.active .cards .reveal:nth-child(3){transition-delay:.16s}
+.btn.primary{background-size:200% 100%;background-image:linear-gradient(110deg,#7665f4 0%,#4d9bea 50%,#7665f4 100%);transition:background-position .55s ease,transform .25s var(--ease),box-shadow .25s}
+.btn.primary:hover{background-position:100% 50%}
+.card .card-icon{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.card:hover .card-icon{transform:translateY(-3px) rotate(-6deg);box-shadow:0 8px 22px #8b7cff22}
+.nav a{position:relative}
+.nav a:after{content:"";position:absolute;right:13px;left:13px;bottom:4px;height:1px;background:linear-gradient(90deg,var(--cyan),var(--accent));transform:scaleX(0);transform-origin:right;transition:transform .25s ease}
+.nav a:hover:after,.nav a[aria-current]:after{transform:scaleX(1)}
+@media(prefers-reduced-motion:reduce){
+ .page.active .hero-copy,.page.active .visual,.page.active .hero-copy .eyebrow,.page.active .hero-copy h1,.page.active .hero-copy .lead,.page.active .hero-copy .actions{animation:none!important}
+ .card:hover .card-icon{transform:none}
+}
+
 </style>
 </head>
 <body>
