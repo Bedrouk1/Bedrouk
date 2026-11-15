@@ -469,6 +469,90 @@ body:before{position:fixed;inset:-18%;z-index:-2;pointer-events:none;background:
 @media(hover:hover) and (pointer:fine){.visual-tile:hover{translate:0 -5px;scale:1.015}}
 @media(prefers-reduced-motion:reduce){body:before,.visual-tile,.visual-tile .tile-art,.visual-tile .tile-art *, .visual-tile:before,.image-orb,.contact-gradient{animation:none!important;translate:none!important;transform:none!important}}
 
+
+/* Complete Machine Learning notebook */
+.ml-notebook{margin-top:52px;padding-top:42px;border-top:1px solid #ffffff18}
+.notebook-hero{position:relative;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:25px;padding:clamp(22px,4vw,42px);border:1px solid #8b7cff45;border-radius:28px;overflow:hidden;background:radial-gradient(ellipse at 80% 20%,#8b7cff25,transparent 42%),radial-gradient(ellipse at 10% 100%,#4de3d218,transparent 45%),linear-gradient(125deg,#10172b,#0b1221 60%,#171126);box-shadow:0 24px 70px #0004}
+.notebook-hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 35%,#ffffff08 50%,transparent 65%);background-size:220% 100%;animation:prismSweep 8s ease-in-out infinite}
+.notebook-hero-copy{position:relative;z-index:1}
+.notebook-hero h3{font-size:clamp(25px,4vw,38px);line-height:1.5;margin:14px 0}
+.notebook-hero p{max-width:650px;color:#aab5c9;line-height:2.15;font-size:14px}
+.notebook-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.notebook-tags span{padding:7px 11px;border:1px solid #ffffff1b;border-radius:30px;background:#ffffff08;color:#c7d0e2;font-size:10px}
+.notebook-hero-art{position:relative;z-index:1;min-width:0}
+.notebook-hero-art svg{display:block;width:100%;max-height:250px;overflow:visible;filter:drop-shadow(0 15px 28px #0008);animation:artFloat 7s ease-in-out infinite}
+.notebook-meta{display:flex;flex-wrap:wrap;gap:10px 22px;padding:15px 4px;color:#98a5bb;font-size:11px}
+.notebook-toc{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:17px;margin:12px 0 22px;border:1px solid #ffffff16;border-radius:18px;background:#ffffff05}
+.notebook-toc b{width:100%;color:#dce4f4;font-size:12px;margin-bottom:4px}
+.notebook-toc a{padding:7px 10px;border:1px solid #8b7cff35;border-radius:9px;color:#c4b5fd;background:#8b7cff0b;font-size:11px;transition:background .2s,border-color .2s,transform .2s}
+.notebook-toc a:hover{background:#8b7cff22;border-color:#8b7cff99;transform:translateY(-2px)}
+.notebook-chapters{display:grid;gap:16px}
+.notebook-chapter{scroll-margin-top:95px;padding:clamp(19px,3vw,30px);border:1px solid #ffffff16;border-radius:22px;background:linear-gradient(145deg,#111a2c,#0c1220 75%);box-shadow:0 15px 45px #0002}
+.chapter-heading{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.chapter-heading>span{width:48px;height:48px;flex:none;display:grid;place-items:center;border:1px solid #8b7cff66;border-radius:15px;background:linear-gradient(145deg,#8b7cff25,#4de3d215);color:#c4b5fd;font:15px "DM Mono";box-shadow:0 0 25px #8b7cff17}
+.chapter-heading small{font:9px "DM Mono";letter-spacing:1.4px;color:#4de3d2}
+.chapter-heading h4{font-size:clamp(18px,3vw,24px);margin:4px 0 0;color:#f0f3ff}
+.notebook-chapter p,.notebook-chapter li{color:#b2bdd0;font-size:13px;line-height:2.15}
+.notebook-chapter p{margin:10px 0}
+.notebook-chapter b{color:#e3e9f8}
+.notebook-chapter h5{margin:25px 0 10px;color:#d7cfff;font-size:15px}
+.notebook-chapter ul,.notebook-chapter ol{padding-right:23px;margin:10px 0}
+.notebook-chapter li{padding-right:4px;margin:5px 0}
+.compare-grid,.type-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0}
+.compare-card,.type-card{padding:16px;border:1px solid #ffffff17;border-radius:16px;background:#ffffff05}
+.compare-card>span{color:#9daac0;font-size:11px}
+.flow-mini{display:grid;justify-items:center;gap:7px;margin-top:13px}
+.flow-mini b,.flow-mini strong{padding:8px 12px;border-radius:9px;background:#8b7cff18;border:1px solid #8b7cff44;color:#e4e7ff;font-size:12px}
+.flow-mini i{color:#4de3d2;font-style:normal}
+.flow-mini strong{background:#4de3d218;border-color:#4de3d255}
+.note-box{margin:18px 0;padding:15px 17px;border-right:3px solid #4de3d2;border-radius:10px;background:linear-gradient(90deg,#4de3d20b,#8b7cff0d);color:#b9c5d8;font-size:12px;line-height:2.1}
+.math-card{margin:15px 0;padding:17px;border:1px solid #8b7cff30;border-radius:15px;background:radial-gradient(ellipse at 100% 0,#8b7cff12,transparent 55%),#ffffff04}
+.math-card>span{display:block;color:#8debe0;font-size:11px;font-weight:700}
+.formula{margin:12px 0;padding:13px 10px;border-radius:10px;background:#080e1c;border:1px solid #ffffff12;color:#f3d6ff;text-align:center;direction:ltr;font:clamp(14px,2.8vw,20px) "DM Mono",monospace;overflow-wrap:anywhere}
+.math-card p{font-size:12px}
+.math-visual{max-width:420px;margin:12px auto 0;padding:8px;border-radius:12px;background:#080e1c}
+.math-visual svg{display:block;width:100%;height:auto}
+.table-wrap{max-width:100%;overflow-x:auto;margin:14px 0;border:1px solid #ffffff16;border-radius:12px}
+.notebook-chapter table{width:100%;border-collapse:collapse;min-width:340px;text-align:center;font-size:12px}
+.notebook-chapter th{background:#8b7cff20;color:#d9d2ff;padding:11px}
+.notebook-chapter td{padding:10px;color:#c1cadd;border-top:1px solid #ffffff12}
+.type-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.type-card>b{font:10px "DM Mono";letter-spacing:.8px;color:#4de3d2}
+.type-card h5{margin:7px 0;color:#f0f3ff}
+.type-card p{font-size:12px}
+.type-card small{color:#a99eff;font-size:10px;line-height:1.8}
+.split-visual{display:grid;grid-template-columns:6fr 2fr 2fr;gap:6px;margin:18px 0}
+.split-visual>div{min-width:0;display:grid;gap:5px;align-content:center;padding:15px 8px;border-radius:12px;text-align:center}
+.split-visual b{font:11px "DM Mono"}
+.split-visual strong{font-size:12px}
+.split-visual small{font-size:9px;line-height:1.7}
+.split-train{background:#4de3d21c;border:1px solid #4de3d255;color:#83eee2}
+.split-val{background:#8b7cff1c;border:1px solid #8b7cff55;color:#c4b5fd}
+.split-test{background:#ff70b818;border:1px solid #ff70b855;color:#ff9bc9}
+.notebook-chapter details{margin:10px 0;border:1px solid #ffffff18;border-radius:13px;background:#ffffff04;overflow:hidden}
+.notebook-chapter details[open]{border-color:#8b7cff55;background:#8b7cff08}
+.notebook-chapter summary{position:relative;cursor:pointer;padding:15px 17px;color:#e3e8f6;font-size:13px;font-weight:700;list-style:none}
+.notebook-chapter summary::-webkit-details-marker{display:none}
+.notebook-chapter summary:after{content:"＋";float:left;color:#4de3d2;font-size:17px}
+.notebook-chapter details[open] summary:after{content:"−"}
+.notebook-chapter details>p,.notebook-chapter details>.formula,.notebook-chapter details>ul,.notebook-chapter details>.codebox,.notebook-chapter details>.math-card{margin-right:17px;margin-left:17px}
+.notebook-chapter .codebox{max-width:100%;overflow-x:auto;font-size:11px;line-height:1.8}
+.workflow-list{counter-reset:workflow;list-style:none;padding:0!important}
+.workflow-list li{position:relative;padding:8px 42px 8px 0!important;border-bottom:1px solid #ffffff0c}
+.workflow-list li:before{counter-increment:workflow;content:counter(workflow,decimal-leading-zero);position:absolute;right:0;top:8px;color:#4de3d2;font:11px "DM Mono"}
+.glossary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.glossary-grid>div{display:grid;gap:5px;padding:12px;border:1px solid #ffffff14;border-radius:11px;background:#ffffff05}
+.glossary-grid b{color:#c4b5fd;font:11px "DM Mono";overflow-wrap:anywhere}
+.glossary-grid span{color:#aab6c9;font-size:10px;line-height:1.7}
+.final-note{margin-top:22px;padding:18px;border:1px solid #b8ed7940;border-radius:15px;background:#b8ed7909}
+.final-note>b{color:#c9f38d}
+.final-note p{margin:6px 0;font-size:12px}
+.notebook-footer{display:grid;gap:8px;margin-top:17px;padding:20px;border:1px solid #4de3d233;border-radius:16px;background:linear-gradient(100deg,#4de3d20b,#8b7cff0c,#ff70b80b)}
+.notebook-footer span{font:10px "DM Mono";letter-spacing:1.5px;color:#4de3d2}
+.notebook-footer b{font-size:13px;color:#dce5f6}
+@media(max-width:700px){.notebook-hero{grid-template-columns:1fr;padding:22px}.notebook-hero-art{max-width:250px;margin:-8px auto 0}.notebook-meta{display:grid;gap:8px}.notebook-toc{gap:6px}.notebook-toc a{font-size:10px;padding:7px 8px}.compare-grid,.type-grid{grid-template-columns:1fr}.glossary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.chapter-heading>span{width:42px;height:42px}.notebook-chapter{padding:18px 15px}.split-visual{grid-template-columns:1fr}.split-visual>div{padding:12px}}
+@media(prefers-reduced-motion:reduce){.notebook-hero:after,.notebook-hero-art svg{animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -577,6 +661,179 @@ body:before{position:fixed;inset:-18%;z-index:-2;pointer-events:none;background:
   <article class="glass lesson-panel reveal" id="lessonPanel" aria-live="polite"></article>
  </div>
 </section>
+ <section class="ml-notebook" id="ml-notebook">
+  <div class="notebook-hero">
+   <div class="notebook-hero-copy">
+    <span class="eyebrow">THE COMPLETE FIELD GUIDE · 2026</span>
+    <h3>دفترچه جامع <span class="gradient-text">Machine Learning</span></h3>
+    <p>از اولین مفهوم تا ساخت، ارزیابی و بهترکردن یک مدل واقعی. این جزوه برای یادگیری قدم‌به‌قدم نوشته شده؛ اصطلاح انگلیسی هر مفهوم را هم کنار معنی فارسی می‌بینی.</p>
+    <div class="notebook-tags"><span>مفهوم + مثال</span><span>ریاضی به زبان ساده</span><span>Python / Scikit-learn</span></div>
+   </div>
+   <div class="notebook-hero-art" aria-hidden="true">
+    <svg viewBox="0 0 360 260" role="img" aria-label="تصویرسازی فرایند یادگیری ماشین">
+     <defs><linearGradient id="mlOrb" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8b7cff"/><stop offset=".55" stop-color="#4de3d2"/><stop offset="1" stop-color="#ff70b8"/></linearGradient><filter id="mlBlur"><feGaussianBlur stdDeviation="12"/></filter></defs>
+     <circle cx="180" cy="128" r="95" fill="url(#mlOrb)" opacity=".12" filter="url(#mlBlur)"/>
+     <g stroke="url(#mlOrb)" stroke-width="2" opacity=".7" fill="none"><path d="M55 65 130 45 215 62 300 35M55 65l45 105 95-65 105 75M130 45l-30 125 95 30 105-20M215 62l-20 138 105-25"/></g>
+     <g fill="#101a30" stroke="url(#mlOrb)" stroke-width="3"><circle cx="55" cy="65" r="10"/><circle cx="130" cy="45" r="10"/><circle cx="215" cy="62" r="10"/><circle cx="300" cy="35" r="10"/><circle cx="100" cy="170" r="10"/><circle cx="195" cy="105" r="13"/><circle cx="195" cy="200" r="10"/><circle cx="300" cy="175" r="10"/></g>
+     <circle cx="195" cy="105" r="30" fill="#17152f" stroke="#ff70b8" stroke-width="2"/><path d="M181 105h28m-14-14v28" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+     <g fill="#dfe8ff" font-family="monospace" font-size="10"><text x="26" y="44">DATA</text><text x="235" y="225">MODEL</text><text x="245" y="18">PREDICT</text></g>
+    </svg>
+   </div>
+  </div>
+  <div class="notebook-meta"><span>⏱ زمان پیشنهادی مطالعه: چند جلسه</span><span>◈ سطح: مقدماتی تا متوسط</span><span>⌁ همراه با مثال‌های قابل اجرا</span></div>
+  <nav class="notebook-toc" aria-label="فهرست جزوه">
+   <b>پرش به فصل</b>
+   <a href="#ml-ch1">۱. تصویر کلی ML</a><a href="#ml-ch2">۲. داده و ویژگی‌ها</a><a href="#ml-ch3">۳. انواع یادگیری</a><a href="#ml-ch4">۴. ریاضیات لازم</a><a href="#ml-ch5">۵. آماده‌سازی داده</a><a href="#ml-ch6">۶. الگوریتم‌ها</a><a href="#ml-ch7">۷. آموزش و ارزیابی</a><a href="#ml-ch8">۸. خطا و بهبود</a><a href="#ml-ch9">۹. پروژه واقعی</a><a href="#ml-ch10">۱۰. واژه‌نامه و مسیر بعدی</a>
+  </nav>
+  <article class="notebook-chapters">
+   <section class="notebook-chapter" id="ml-ch1">
+    <div class="chapter-heading"><span>01</span><div><small>FOUNDATION</small><h4>یادگیری ماشین دقیقاً چیست؟</h4></div></div>
+    <p><b>یادگیری ماشین (Machine Learning یا ML)</b> شاخه‌ای از هوش مصنوعی است که به کامپیوتر کمک می‌کند از داده‌ها الگو یاد بگیرد و برای داده‌های تازه پیش‌بینی یا تصمیم تولید کند. در برنامه‌نویسی معمولی، انسان قانون‌ها را می‌نویسد؛ در یادگیری ماشین، ما نمونه‌ها و روش یادگیری را فراهم می‌کنیم تا الگوریتم رابطه‌ها را از داده پیدا کند.</p>
+    <div class="compare-grid"><div class="compare-card"><span>برنامه‌نویسی سنتی</span><div class="flow-mini"><b>داده</b><i>+</i><b>قانون‌های نوشته‌شده</b><i>↓</i><strong>خروجی</strong></div></div><div class="compare-card"><span>یادگیری ماشین</span><div class="flow-mini"><b>داده</b><i>+</i><b>پاسخ‌های نمونه</b><i>↓</i><strong>مدل یادگرفته‌شده</strong></div></div></div>
+    <p>مثلاً برای تشخیص پیام تبلیغاتی، لازم نیست هزاران قانون مثل «اگر فلان کلمه بود، هرزنامه است» بنویسیم. می‌توانیم پیام‌های زیادی را که قبلاً برچسب «عادی» یا «هرزنامه» گرفته‌اند به الگوریتم بدهیم تا الگوهای مفید را یاد بگیرد. مدل سپس پیام جدید را بررسی می‌کند.</p>
+    <div class="note-box"><b>یک نکته مهم:</b> مدل مثل انسان مفهوم را لزوماً درک نمی‌کند؛ ساختارها و الگوهای آماری موجود در داده را یاد می‌گیرد. خروجی آن ممکن است اشتباه باشد و باید ارزیابی شود.</div>
+    <h5>واژه‌های پایه</h5>
+    <ul><li><b>الگوریتم (Algorithm):</b> روش یا دستورالعملی که برای یادگیری استفاده می‌شود.</li><li><b>مدل (Model):</b> نتیجه آموزش؛ چیزی که بعداً برای پیش‌بینی استفاده می‌کنیم.</li><li><b>آموزش (Training):</b> فرایندی که مدل در آن پارامترهای خود را با داده تنظیم می‌کند.</li><li><b>پیش‌بینی (Prediction):</b> خروجی مدل برای یک نمونه تازه.</li><li><b>پارامتر (Parameter):</b> مقداری که مدل هنگام آموزش یاد می‌گیرد؛ مثل وزن‌ها در رگرسیون خطی.</li><li><b>ابرپارامتر (Hyperparameter):</b> تنظیمی که ما پیش از آموزش انتخاب می‌کنیم؛ مثل تعداد همسایه‌ها در KNN.</li></ul>
+   </section>
+   <section class="notebook-chapter" id="ml-ch2">
+    <div class="chapter-heading"><span>02</span><div><small>DATA LITERACY</small><h4>داده، نمونه، ویژگی و برچسب</h4></div></div>
+    <p>داده سوخت یادگیری ماشین است. کیفیت و مناسب‌بودن داده معمولاً به‌اندازه انتخاب الگوریتم اهمیت دارد. در داده جدولی، هر <b>سطر</b> یک نمونه (Sample) و هر <b>ستون</b> یک ویژگی (Feature) یا برچسب است.</p>
+    <div class="table-wrap"><table><thead><tr><th>متراژ (متر)</th><th>اتاق</th><th>سن بنا</th><th>قیمت (میلیون)</th></tr></thead><tbody><tr><td>۸۰</td><td>۲</td><td>۱۰</td><td>۴۲۰۰</td></tr><tr><td>۱۲۰</td><td>۳</td><td>۵</td><td>۷۸۰۰</td></tr><tr><td>۶۰</td><td>۱</td><td>۲۰</td><td>۲۹۰۰</td></tr></tbody></table></div>
+    <p>اگر هدف پیش‌بینی قیمت باشد، سه ستون اول <b>ویژگی‌ها (X)</b> و ستون قیمت <b>هدف یا برچسب (y)</b> است. اگر هدف دسته‌بندی خانه‌ها به «کوچک، متوسط، بزرگ» باشد، همان داده‌ها می‌توانند مسئله دیگری را تشکیل دهند.</p>
+    <div class="math-card"><span>نمای ریاضی یک مجموعه داده</span><div class="formula">X ∈ R<sup>n×m</sup> &nbsp; و &nbsp; y ∈ R<sup>n</sup></div><p>n تعداد نمونه‌ها و m تعداد ویژگی‌هاست. برای مثال، ۱۰۰۰ خانه و ۳ ویژگی یعنی X دارای ۱۰۰۰ سطر و ۳ ستون است.</p></div>
+    <h5>انواع داده و ویژگی</h5>
+    <ul><li><b>عددی (Numerical):</b> مثل سن، قد، قیمت و تعداد؛ می‌تواند پیوسته یا گسسته باشد.</li><li><b>دسته‌ای (Categorical):</b> مثل شهر، رنگ یا نوع محصول؛ عددهای آن الزاماً معنی فاصله ندارند.</li><li><b>متنی (Text):</b> مثل نظر کاربران؛ معمولاً باید به نمایش عددی تبدیل شود.</li><li><b>تصویری و صوتی:</b> پیکسل‌ها یا سیگنال‌ها که نیازمند روش‌های پردازش مناسب‌اند.</li><li><b>برچسب (Label/Target):</b> جواب درست در داده آموزشی؛ در یادگیری بدون نظارت ممکن است اصلاً برچسبی وجود نداشته باشد.</li></ul>
+    <h5>داده خوب چه ویژگی‌هایی دارد؟</h5>
+    <p>مرتبط با مسئله، به‌اندازه کافی متنوع، تا حد ممکن درست، بدون تکرارهای گمراه‌کننده و نماینده شرایط واقعی استفاده باشد. اگر داده فقط از یک گروه یا یک بازه زمانی جمع شده باشد، مدل ممکن است برای شرایط دیگر ضعیف عمل کند.</p>
+   </section>
+   <section class="notebook-chapter" id="ml-ch3">
+    <div class="chapter-heading"><span>03</span><div><small>LEARNING PARADIGMS</small><h4>انواع اصلی یادگیری ماشین</h4></div></div>
+    <div class="type-grid"><div class="type-card"><b>Supervised Learning</b><h5>یادگیری نظارت‌شده</h5><p>داده همراه پاسخ درست است. مدل ورودی و جواب را می‌بیند و رابطه آن‌ها را یاد می‌گیرد.</p><small>مثال: پیش‌بینی قیمت، تشخیص ایمیل هرزنامه</small></div><div class="type-card"><b>Unsupervised Learning</b><h5>یادگیری بدون نظارت</h5><p>داده برچسب آماده ندارد. الگوریتم ساختار، گروه یا الگوهای پنهان را پیدا می‌کند.</p><small>مثال: گروه‌بندی مشتریان با K-Means</small></div><div class="type-card"><b>Reinforcement Learning</b><h5>یادگیری تقویتی</h5><p>یک عامل با محیط تعامل می‌کند، عمل انجام می‌دهد و بر اساس پاداش یا جریمه یاد می‌گیرد.</p><small>مثال: عامل بازی که با تجربه بهتر بازی می‌کند</small></div><div class="type-card"><b>Self-supervised Learning</b><h5>یادگیری خودنظارتی</h5><p>سیستم از خود داده، هدف آموزشی می‌سازد؛ مثلاً بخشی از متن را پنهان می‌کند و تلاش می‌کند آن را پیش‌بینی کند.</p><small>مثال: پیش‌آموزش بسیاری از مدل‌های زبانی</small></div></div>
+    <h5>دو مسئله مهم در یادگیری نظارت‌شده</h5>
+    <p><b>طبقه‌بندی (Classification):</b> خروجی یک دسته است؛ مثل تشخیص گربه یا سگ، یا پیش‌بینی قبولی/ردی. <b>رگرسیون (Regression):</b> خروجی یک مقدار عددی است؛ مثل قیمت خانه یا دمای فردا.</p>
+    <div class="note-box"><b>یادت بماند:</b> دسته‌بندی، عددی بودن خروجی داخلی مدل را نفی نمی‌کند؛ مهم این است که پاسخ نهایی یک کلاس باشد. رگرسیون مقدار کمّی پیش‌بینی می‌کند.</div>
+   </section>
+   <section class="notebook-chapter" id="ml-ch4">
+    <div class="chapter-heading"><span>04</span><div><small>MATH WITHOUT FEAR</small><h4>ریاضیات موردنیاز، بدون ترس</h4></div></div>
+    <p>برای شروع لازم نیست ریاضی دانشگاهی بلد باشی. اما چند مفهوم پایه کمک می‌کند بفهمی الگوریتم‌ها چه می‌کنند. این فرمول‌ها ابزار فهم هستند، نه چیزی برای حفظ‌کردن کورکورانه.</p>
+    <div class="math-card"><span>۱. میانگین (Mean)</span><div class="formula">x̄ = (x₁ + x₂ + ... + xₙ) / n</div><p>مجموع مقدارها تقسیم بر تعدادشان. برای عددهای ۲، ۴ و ۶ میانگین برابر ۴ است. میانگین در پرکردن بعضی داده‌های خالی و فهم مرکز داده استفاده می‌شود.</p></div>
+    <div class="math-card"><span>۲. فاصله اقلیدسی (Euclidean Distance)</span><div class="formula">d = √[(x₁−y₁)² + (x₂−y₂)²]</div><p>فاصله دو نقطه در صفحه. KNN از فاصله برای پیدا کردن همسایه‌های نزدیک استفاده می‌کند. برای چند ویژگی، اختلاف هر ویژگی را در محاسبه وارد می‌کنیم.</p><div class="math-visual"><svg viewBox="0 0 320 150" role="img" aria-label="نمودار فاصله میان دو نقطه"><path d="M35 120H290M35 120V15" stroke="#8190aa" stroke-width="1.5"/><path d="M90 95 230 35" stroke="#4de3d2" stroke-width="3" stroke-dasharray="6 4"/><path d="M90 95V35H230" fill="none" stroke="#a78bfa" stroke-dasharray="4 4"/><circle cx="90" cy="95" r="6" fill="#ff70b8"/><circle cx="230" cy="35" r="6" fill="#4de3d2"/><g fill="#e8edff" font-size="11"><text x="68" y="112">A</text><text x="238" y="30">B</text><text x="130" y="57">فاصله</text><text x="270" y="137">x</text><text x="20" y="18">y</text></g></svg></div></div>
+    <div class="math-card"><span>۳. نرمال‌سازی استاندارد (Standardization)</span><div class="formula">z = (x − μ) / σ</div><p>از هر مقدار، میانگین ویژگی را کم می‌کنیم و بر انحراف معیار تقسیم می‌کنیم. μ میانگین و σ انحراف معیار داده آموزشی است. این کار ویژگی‌ها را در مقیاس قابل‌مقایسه‌تری قرار می‌دهد؛ معمولاً میانگین نزدیک صفر و انحراف معیار نزدیک یک می‌شود.</p></div>
+    <div class="math-card"><span>۴. تابع خطا یا زیان (Loss)</span><div class="formula">MSE = (1/n) Σ (yᵢ − ŷᵢ)²</div><p>در رگرسیون، MSE میانگین مربع اختلاف جواب واقعی y و پیش‌بینی ŷ است. هرچه کمتر باشد، خطای مربعی روی همان داده‌ها کمتر است؛ اما باید آن را روی داده ارزیابی هم بررسی کنیم.</p></div>
+    <div class="math-card"><span>۵. احتمال ساده</span><div class="formula">P(A) = تعداد حالت‌های مطلوب / تعداد حالت‌های ممکن</div><p>احتمال عددی بین صفر و یک است. صفر یعنی ناممکن و یک یعنی قطعی. بعضی مدل‌ها مثل Naive Bayes از احتمال برای مقایسه کلاس‌ها استفاده می‌کنند.</p></div>
+    <div class="math-card"><span>۶. مشتق و گرادیان، در یک جمله</span><div class="formula">w ← w − α × gradient</div><p>گرادیان نشان می‌دهد خطا در کدام جهت سریع‌تر زیاد می‌شود. در Gradient Descent، پارامترها در جهت مخالف گرادیان و با اندازه گام α تغییر می‌کنند تا خطا کاهش یابد. α همان نرخ یادگیری (Learning Rate) است.</p></div>
+    <div class="note-box">در این جزوه از نماد Σ برای جمع‌زدن چند مقدار استفاده شده است. اگر فعلاً مشتق یا سیگما را بلد نیستی، نگران نباش؛ در سطح مقدماتی کافی است مفهوم «اندازه‌گیری خطا و اصلاح تدریجی پارامترها» را درک کنی.</div>
+   </section>
+   <section class="notebook-chapter" id="ml-ch5">
+    <div class="chapter-heading"><span>05</span><div><small>DATA PREPARATION</small><h4>آماده‌سازی داده؛ بخش بسیار مهم پروژه</h4></div></div>
+    <p>داده واقعی معمولاً تمیز و آماده نیست. ممکن است مقدار خالی، متن، عددهای نامعتبر، مقیاس‌های بسیار متفاوت یا نمونه‌های تکراری داشته باشد. قبل از آموزش باید داده را بررسی و آماده کنیم.</p>
+    <ol><li><b>شناخت داده:</b> تعداد سطرها و ستون‌ها، نوع ستون‌ها، چند سطر اول و آمار کلی را ببین.</li><li><b>مقادیر گمشده (Missing Values):</b> بررسی کن کدام ستون مقدار خالی دارد. بسته به معنی ستون می‌توان نمونه را حذف کرد یا با میانه، میانگین، پرتکرارترین مقدار یا روش مناسب دیگری پر کرد. همیشه دلیل انتخاب را در نظر بگیر.</li><li><b>داده تکراری و ناسازگار:</b> رکوردهای تکراری، واحدهای متفاوت و مقدارهای غیرممکن را بررسی کن.</li><li><b>تبدیل دسته‌ها به عدد:</b> مدل‌های عددی نمی‌توانند مستقیماً همه متن‌ها را بخوانند؛ از One-Hot Encoding یا روش‌های مناسب دیگر استفاده می‌شود.</li><li><b>مقیاس‌بندی:</b> برای الگوریتم‌های حساس به فاصله یا مقیاس، از StandardScaler یا MinMaxScaler کمک بگیر.</li><li><b>انتخاب ویژگی:</b> ستون‌های بی‌ربط، شناسه‌های تصادفی یا اطلاعاتی که در زمان پیش‌بینی در دسترس نیستند را با دقت مدیریت کن.</li></ol>
+    <h5>Encoding یعنی چه؟</h5>
+    <p><b>Label Encoding</b> به دسته‌ها عدد اختصاص می‌دهد؛ برای نمونه شهر A برابر ۰ و شهر B برابر ۱. این عددها ممکن است ترتیب ساختگی ایجاد کنند، پس برای ویژگی‌های اسمی معمولاً <b>One-Hot Encoding</b> انتخاب مطمئن‌تری است: برای هر دسته یک ستون صفر/یک می‌سازد. برای برچسب‌های طبقه‌بندی، کدگذاری عددی کلاس‌ها معمولاً قابل استفاده است.</p>
+    <div class="math-card"><span>نمونه One-Hot Encoding</span><div class="table-wrap"><table><thead><tr><th>شهر</th><th>تهران</th><th>شیراز</th><th>تبریز</th></tr></thead><tbody><tr><td>تهران</td><td>۱</td><td>۰</td><td>۰</td></tr><tr><td>شیراز</td><td>۰</td><td>۱</td><td>۰</td></tr><tr><td>تبریز</td><td>۰</td><td>۰</td><td>۱</td></tr></tbody></table></div><p>هر ردیف فقط ستون دسته خودش را یک می‌کند.</p></div>
+    <h5>تقسیم داده: Train، Validation و Test</h5>
+    <div class="split-visual"><div class="split-train"><b>Train</b><strong>آموزش</strong><small>یادگیری پارامترها</small></div><div class="split-val"><b>Validation</b><strong>اعتبارسنجی</strong><small>انتخاب تنظیمات</small></div><div class="split-test"><b>Test</b><strong>آزمون نهایی</strong><small>ارزیابی نهایی</small></div></div>
+    <ul><li><b>Train:</b> مدل با این بخش آموزش می‌بیند.</li><li><b>Validation:</b> برای مقایسه مدل‌ها و تنظیم ابرپارامترها استفاده می‌شود؛ در همه پروژه‌ها الزاماً جدا نیست و می‌توان از Cross-validation استفاده کرد.</li><li><b>Test:</b> تا پایان انتخاب مدل کنار گذاشته می‌شود و برای تخمین عملکرد روی داده ندیده به کار می‌رود.</li></ul>
+    <div class="note-box"><b>نشت اطلاعات (Data Leakage):</b> اگر اطلاعاتی از داده آزمون وارد آموزش یا آماده‌سازی شود، ارزیابی بیش از حد خوش‌بینانه می‌شود. مثلاً StandardScaler را فقط روی Train، با fit، تنظیم کن و سپس همان تبدیل را روی Validation و Test با transform اعمال کن.</div>
+   </section>
+   <section class="notebook-chapter" id="ml-ch6">
+    <div class="chapter-heading"><span>06</span><div><small>CORE ALGORITHMS</small><h4>الگوریتم‌های مهم یادگیری ماشین</h4></div></div>
+    <details open><summary>۱. Linear Regression — رگرسیون خطی</summary><p>برای پیش‌بینی یک مقدار عددی استفاده می‌شود. مدل تلاش می‌کند رابطه‌ای خطی بین ویژگی‌ها و خروجی پیدا کند.</p><div class="formula">ŷ = w₁x₁ + w₂x₂ + ... + b</div><p>wها وزن ویژگی‌ها و b مقدار ثابت یا عرض از مبدأ است. مدل وزن‌ها را طوری تنظیم می‌کند که خطا روی داده آموزشی کاهش پیدا کند.</p><pre class="codebox"><code>from sklearn.linear_model import LinearRegression
+
+model = LinearRegression()
+model.fit(X_train, y_train)
+predictions = model.predict(X_test)</code></pre><p><b>مثال:</b> تخمین قیمت خانه با استفاده از متراژ، تعداد اتاق و سن بنا. اگر رابطه بسیار پیچیده باشد، خط مستقیم ممکن است کافی نباشد.</p></details>
+    <details><summary>۲. Logistic Regression — رگرسیون لجستیک</summary><p>با وجود نامش، معمولاً برای طبقه‌بندی استفاده می‌شود. ابتدا ترکیبی از ویژگی‌ها را می‌سازد و سپس تابعی به نام Sigmoid آن را به عددی بین صفر و یک تبدیل می‌کند که می‌تواند به‌عنوان احتمال کلاس مثبت تفسیر شود.</p><div class="formula">σ(z) = 1 / (1 + e<sup>−z</sup>)</div><p>مثلاً اگر خروجی ۰٫۸ باشد، مدل برای کلاس مثبت امتیاز احتمالی بالاتری می‌دهد. آستانه تصمیم مثل ۰٫۵ قابل تنظیم است و همیشه بهترین انتخاب نیست.</p></details>
+    <details><summary>۳. K-Nearest Neighbors (KNN) — نزدیک‌ترین همسایه‌ها</summary><p>برای پیش‌بینی یک نمونه تازه، فاصله آن تا نمونه‌های آموزشی را حساب می‌کند و K همسایه نزدیک را برمی‌گزیند. در طبقه‌بندی، رأی همسایه‌ها و در رگرسیون، معمولاً میانگین هدف همسایه‌ها استفاده می‌شود.</p><ul><li>K خیلی کوچک می‌تواند به نویز حساس باشد.</li><li>K خیلی بزرگ ممکن است مرز گروه‌ها را بیش از حد هموار کند.</li><li>مقیاس‌بندی ویژگی‌ها مهم است؛ چون فاصله مبنای تصمیم است.</li></ul><pre class="codebox"><code>from sklearn.neighbors import KNeighborsClassifier
+
+model = KNeighborsClassifier(n_neighbors=5)
+model.fit(X_train, y_train)
+pred = model.predict(X_test)</code></pre></details>
+    <details><summary>۴. Decision Tree — درخت تصمیم</summary><p>با پرسش‌های پیاپی داده را به شاخه‌ها تقسیم می‌کند؛ مثلاً «آیا سن کمتر از ۳۰ است؟». هر تقسیم تلاش می‌کند گروه‌های منظم‌تری بسازد. درخت قابل توضیح است، اما اگر بیش از حد رشد کند ممکن است داده آموزشی را حفظ کند و روی داده تازه ضعیف شود.</p><p>پارامترهایی مثل max_depth و min_samples_leaf رشد درخت را کنترل می‌کنند.</p></details>
+    <details><summary>۵. Random Forest — جنگل تصادفی</summary><p>مجموعه‌ای از درخت‌های تصمیم است. هر درخت با نمونه‌گیری تصادفی از داده و ویژگی‌ها ساخته می‌شود. خروجی درخت‌ها با رأی‌گیری یا میانگین‌گیری ترکیب می‌شود؛ این کار معمولاً پایداری را نسبت به یک درخت تنها بهتر می‌کند.</p><pre class="codebox"><code>from sklearn.ensemble import RandomForestClassifier
+
+model = RandomForestClassifier(
+    n_estimators=100,
+    random_state=42
+)
+model.fit(X_train, y_train)</code></pre><p>تعداد درخت‌ها، عمق و اندازه برگ‌ها روی سرعت و کیفیت اثر دارند. جنگل تصادفی برای داده‌های جدولی نقطه شروع قدرتمندی است.</p></details>
+    <details><summary>۶. Support Vector Machine (SVM)</summary><p>SVM به دنبال مرزی است که کلاس‌ها را با حاشیه‌ای مناسب از هم جدا کند. با Kernel می‌تواند مرزهای غیرخطی را هم مدل کند. مقیاس ویژگی‌ها و انتخاب پارامترهایی مثل C و gamma اهمیت دارد.</p></details>
+    <details><summary>۷. Naive Bayes — بیز ساده</summary><p>از قضیه بیز برای محاسبه احتمال کلاس‌ها استفاده می‌کند و فرض ساده‌کننده‌ای دارد: ویژگی‌ها با دانستن کلاس، مستقل فرض می‌شوند. این فرض همیشه دقیق نیست، اما مدل می‌تواند برای دسته‌بندی متن و مسائل سبک مفید باشد.</p></details>
+    <details><summary>۸. K-Means — خوشه‌بندی</summary><p>یک الگوریتم بدون نظارت است. تعداد خوشه‌ها K را مشخص می‌کنیم؛ سپس الگوریتم نقاط را به نزدیک‌ترین مرکز خوشه نسبت می‌دهد و مرکزها را بارها به‌روزرسانی می‌کند تا تغییرات کم شود.</p><div class="math-card"><div class="formula">هدف: کمینه‌کردن Σ ||xᵢ − μ<sub>cluster(i)</sub>||²</div><p>یعنی فاصله مربعی نقاط تا مرکز خوشه خودشان تا حد ممکن کم شود. K-Means به مقیاس داده و انتخاب K حساس است؛ نتیجه خوشه‌ها هم لزوماً معنای واقعی یا برچسب قطعی ندارد.</p></div></details>
+    <details><summary>۹. PCA — تحلیل مؤلفه‌های اصلی</summary><p>PCA روش کاهش بُعد است. ویژگی‌های هم‌بسته را به محورهای تازه‌ای تبدیل می‌کند که مؤلفه‌های اول بخش بیشتری از تغییرات داده را توضیح می‌دهند. برای ساده‌سازی نمایش، فشرده‌سازی یا آماده‌سازی بعضی مدل‌ها مفید است؛ اما مؤلفه‌ها ممکن است تفسیر مستقیم ویژگی‌های اولیه را نداشته باشند.</p></details>
+    <details><summary>۱۰. Neural Networks و Deep Learning</summary><p>شبکه عصبی از لایه‌هایی از واحدهای محاسباتی تشکیل می‌شود. هر واحد ورودی‌ها را وزن‌دهی می‌کند، یک مقدار به دست می‌آورد و از تابع فعال‌سازی عبور می‌دهد. شبکه با پس‌انتشار خطا (Backpropagation) و روش‌هایی مثل Gradient Descent وزن‌ها را اصلاح می‌کند. شبکه‌های عمیق برای تصویر، صوت و متن قدرتمندند، اما معمولاً به داده و توان محاسباتی بیشتری نیاز دارند.</p></details>
+   </section>
+   <section class="notebook-chapter" id="ml-ch7">
+    <div class="chapter-heading"><span>07</span><div><small>MODEL EVALUATION</small><h4>چطور بفهمیم مدل خوب یاد گرفته است؟</h4></div></div>
+    <p>صرفاً اجرای fit به معنی ساخت مدل خوب نیست. باید پیش‌بینی مدل را با جواب واقعی روی داده‌ای که در آموزش ندیده مقایسه کنیم. معیار درست به نوع مسئله و هزینه اشتباه‌ها بستگی دارد.</p>
+    <h5>معیارهای طبقه‌بندی</h5>
+    <ul><li><b>Accuracy:</b> نسبت پیش‌بینی‌های درست به کل پیش‌بینی‌ها. وقتی کلاس‌ها نامتوازن‌اند ممکن است گمراه‌کننده باشد.</li><li><b>Precision:</b> از مواردی که مدل مثبت اعلام کرده، چند مورد واقعاً مثبت بوده‌اند؟</li><li><b>Recall:</b> از همه موارد مثبت واقعی، مدل چند مورد را پیدا کرده است؟</li><li><b>F1-score:</b> میانگین هماهنگ Precision و Recall؛ وقتی هر دو مهم‌اند مفید است.</li><li><b>Confusion Matrix:</b> جدول مقایسه کلاس واقعی و پیش‌بینی‌شده؛ نشان می‌دهد اشتباه‌ها در کدام کلاس رخ داده‌اند.</li></ul>
+    <div class="math-card"><span>فرمول‌های اصلی</span><div class="formula">Accuracy = (TP + TN) / (TP + TN + FP + FN)</div><div class="formula">Precision = TP / (TP + FP)</div><div class="formula">Recall = TP / (TP + FN)</div><div class="formula">F1 = 2 × (Precision × Recall) / (Precision + Recall)</div><p>TP مثبت درست، TN منفی درست، FP مثبت کاذب و FN منفی کاذب است. اگر شناسایی همه موارد مثبت حیاتی باشد، Recall اهمیت زیادی دارد؛ اگر هشدار اشتباه پرهزینه باشد، Precision مهم‌تر می‌شود.</p></div>
+    <h5>معیارهای رگرسیون</h5>
+    <ul><li><b>MAE:</b> میانگین قدرمطلق اختلاف پیش‌بینی و مقدار واقعی؛ قابل‌فهم و با واحد اصلی هدف.</li><li><b>MSE:</b> میانگین مربع خطا؛ خطاهای بزرگ را بیشتر جریمه می‌کند.</li><li><b>RMSE:</b> ریشه MSE؛ دوباره در واحد اصلی هدف بیان می‌شود.</li><li><b>R²:</b> میزان بهبود مدل نسبت به پیش‌بینی ساده میانگین در داده ارزیابی؛ می‌تواند منفی هم باشد.</li></ul>
+    <pre class="codebox"><code>from sklearn.metrics import (
+    accuracy_score, classification_report,
+    confusion_matrix
+)
+
+pred = model.predict(X_test)
+print("Accuracy:", accuracy_score(y_test, pred))
+print(classification_report(y_test, pred))
+print(confusion_matrix(y_test, pred))</code></pre>
+    <div class="note-box">معیارها را با توجه به کاربرد تفسیر کن. در داده نامتوازن، Accuracy به‌تنهایی کافی نیست؛ کلاس‌ها، ماتریس درهم‌ریختگی و Precision/Recall را هم ببین.</div>
+   </section>
+   <section class="notebook-chapter" id="ml-ch8">
+    <div class="chapter-heading"><span>08</span><div><small>GENERALIZATION</small><h4>بیش‌برازش، کم‌برازش و بهترکردن مدل</h4></div></div>
+    <p>هدف این نیست که مدل فقط داده آموزشی را عالی جواب دهد؛ هدف این است که روی نمونه‌های تازه هم عملکرد مناسبی داشته باشد. این توانایی را <b>تعمیم (Generalization)</b> می‌نامیم.</p>
+    <div class="type-grid"><div class="type-card"><b>UNDERFITTING</b><h5>کم‌برازش</h5><p>مدل بیش از حد ساده است و حتی الگوی داده آموزشی را خوب یاد نمی‌گیرد. خطای آموزش و آزمون هر دو معمولاً بالا هستند.</p></div><div class="type-card"><b>GOOD FIT</b><h5>برازش مناسب</h5><p>مدل الگوی اصلی را یاد می‌گیرد و روی داده ندیده هم عملکرد قابل‌قبولی دارد.</p></div><div class="type-card"><b>OVERFITTING</b><h5>بیش‌برازش</h5><p>مدل جزئیات و حتی نویز آموزش را حفظ می‌کند. خطای آموزش کم، اما خطای داده تازه زیاد می‌شود.</p></div></div>
+    <h5>راه‌های کاهش بیش‌برازش</h5>
+    <ul><li>ساده‌ترکردن مدل یا محدودکردن عمق درخت.</li><li>جمع‌آوری داده متنوع‌تر و باکیفیت‌تر.</li><li>استفاده از Regularization برای محدودکردن پیچیدگی.</li><li>Cross-validation برای سنجش پایداری انتخاب مدل.</li><li>حذف ویژگی‌های نشت‌کننده یا بی‌ربط، فقط با تحلیل درست.</li><li>در شبکه عصبی، روش‌هایی مثل Dropout یا توقف زودهنگام می‌توانند کمک کنند.</li></ul>
+    <h5>Cross-validation چیست؟</h5>
+    <p>در اعتبارسنجی K-Fold داده به K بخش تقسیم می‌شود. هر بار یک بخش برای اعتبارسنجی و بقیه برای آموزش استفاده می‌شوند؛ این کار K بار تکرار می‌شود و میانگین نتیجه‌ها معیار مقایسه است. داده Test نهایی همچنان باید کنار گذاشته بماند.</p>
+    <h5>تنظیم ابرپارامترها</h5>
+    <p>پارامترهای یادگرفته‌شده با ابرپارامترهای انتخابی فرق دارند. برای نمونه، K در KNN یا max_depth در درخت تصمیم ابرپارامتر است. می‌توان چند مقدار را با GridSearchCV یا RandomizedSearchCV مقایسه کرد؛ این انتخاب باید فقط با داده آموزش و اعتبارسنجی انجام شود، نه با نگاه‌کردن مکرر به Test.</p>
+   </section>
+   <section class="notebook-chapter" id="ml-ch9">
+    <div class="chapter-heading"><span>09</span><div><small>END-TO-END WORKFLOW</small><h4>ساخت یک پروژه واقعی از صفر تا نتیجه</h4></div></div>
+    <p>فرض کن می‌خواهیم مدلی بسازیم که از روی اطلاعات خانه، قیمت آن را تخمین بزند. مسیر کلی پروژه چنین است:</p>
+    <ol class="workflow-list"><li><b>تعریف مسئله:</b> دقیق مشخص کن چه چیزی را پیش‌بینی می‌کنی و نتیجه قرار است چگونه استفاده شود.</li><li><b>جمع‌آوری داده:</b> داده مرتبط، مجاز و نماینده شرایط واقعی تهیه کن.</li><li><b>بررسی و پاک‌سازی:</b> ستون‌ها، نوع داده، مقدارهای خالی، تکراری و غیرعادی را بررسی کن.</li><li><b>ساخت X و y:</b> ویژگی‌ها را از هدف جدا کن.</li><li><b>تقسیم داده:</b> Train و Test را جدا کن؛ در صورت نیاز Validation یا Cross-validation هم داشته باش.</li><li><b>پیش‌پردازش:</b> مقدارهای خالی، دسته‌ها و مقیاس‌ها را با روش مناسب آماده کن؛ تبدیل‌ها را فقط روی Train یاد بگیر.</li><li><b>ساخت مدل پایه:</b> یک مدل ساده بساز تا معیار مقایسه داشته باشی.</li><li><b>آموزش:</b> با fit مدل را روی داده Train آموزش بده.</li><li><b>ارزیابی:</b> با معیارهای مناسب عملکرد را روی داده ندیده بسنج.</li><li><b>بهبود:</b> خطاها را بررسی کن، ویژگی‌ها و ابرپارامترها را منطقی اصلاح کن.</li><li><b>استفاده و پایش:</b> مدل را در برنامه قرار بده و در طول زمان کیفیت و تغییر داده‌ها را زیر نظر بگیر.</li></ol>
+    <pre class="codebox"><code># یک الگوی ساده برای مسئله رگرسیون
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_absolute_error
+
+df = pd.read_csv("houses.csv")
+X = df[["area", "rooms", "age"]]
+y = df["price"]
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
+model = LinearRegression()
+model.fit(X_train_scaled, y_train)
+
+pred = model.predict(X_test_scaled)
+print("MAE:", mean_absolute_error(y_test, pred))</code></pre>
+    <p>این کد یک الگوی آموزشی است و فرض می‌کند فایل houses.csv با همین ستون‌ها وجود دارد و داده‌ها برای این مدل مناسب‌اند. در پروژه واقعی باید نوع ستون‌ها، داده‌های خالی و نیاز به Encoding را هم بررسی کنی. برای مدل‌هایی مثل درخت تصمیم و Random Forest معمولاً StandardScaler ضروری نیست.</p>
+    <div class="note-box"><b>نکته حرفه‌ای:</b> در پروژه‌های جدی از Pipeline و ColumnTransformer استفاده می‌شود تا پیش‌پردازش و مدل‌سازی یکپارچه شود و خطر نشت اطلاعات کمتر شود.</div>
+   </section>
+   <section class="notebook-chapter" id="ml-ch10">
+    <div class="chapter-heading"><span>10</span><div><small>GLOSSARY & NEXT STEPS</small><h4>واژه‌نامه و مسیر ادامه یادگیری</h4></div></div>
+    <div class="glossary-grid"><div><b>Dataset</b><span>مجموعه داده</span></div><div><b>Feature</b><span>ویژگی ورودی</span></div><div><b>Label / Target</b><span>هدف یا پاسخ درست</span></div><div><b>Estimator</b><span>مدل یا شیء یادگیرنده در Scikit-learn</span></div><div><b>Fit</b><span>یادگیری از داده</span></div><div><b>Transform</b><span>تبدیل داده با تنظیمات یادگرفته‌شده</span></div><div><b>Predict</b><span>تولید پیش‌بینی</span></div><div><b>Loss</b><span>مقدار خطای مورد بهینه‌سازی</span></div><div><b>Epoch</b><span>یک بار عبور کامل از داده آموزشی در برخی روش‌ها</span></div><div><b>Batch</b><span>بخشی از داده که در یک گام پردازش می‌شود</span></div><div><b>Inference</b><span>استفاده از مدل آموزش‌دیده</span></div><div><b>Deployment</b><span>قرار دادن مدل در محیط استفاده</span></div></div>
+    <h5>ترتیب پیشنهادی برای یادگیری</h5>
+    <ol><li>Python پایه، متغیرها، شرط، حلقه، تابع و ساختار داده‌ها.</li><li>NumPy و Pandas برای کار با داده‌ها.</li><li>نمودارها و آمار توصیفی برای شناخت داده.</li><li>Train/Test Split، پاک‌سازی، Encoding و Scaling.</li><li>رگرسیون خطی و لجستیک، KNN، درخت تصمیم و Random Forest.</li><li>معیارهای ارزیابی، بیش‌برازش و Cross-validation.</li><li>K-Means و PCA برای یادگیری بدون نظارت.</li><li>پس از تسلط بر پایه‌ها، ریاضی عمیق‌تر و شبکه‌های عصبی.</li></ol>
+    <div class="final-note"><b>چک‌لیست قبل از گفتن «مدلم آماده است»</b><p>□ مسئله و هدف را دقیق تعریف کرده‌ام.</p><p>□ داده را شناخته‌ام و مشکلاتش را بررسی کرده‌ام.</p><p>□ داده آموزش و آزمون را جدا نگه داشته‌ام.</p><p>□ پیش‌پردازش را بدون نشت اطلاعات انجام داده‌ام.</p><p>□ معیار مناسب مسئله را انتخاب کرده‌ام.</p><p>□ مدل را روی داده ندیده ارزیابی کرده‌ام.</p><p>□ محدودیت‌ها و خطاهای احتمالی را می‌دانم.</p></div>
+   </section>
+  </article>
+  <div class="notebook-footer"><span>END OF FIELD GUIDE</span><b>یادگیری ماشین با تمرین واقعی جا می‌افتد؛ هر مفهوم را با یک دیتاست کوچک امتحان کن.</b></div>
+ </section>
 <section class="page" data-page="ai">
  <span class="eyebrow">UNDERSTAND THE TECHNOLOGY</span><h2>هوش مصنوعی را <span class="gradient-text">ساده بشناس</span></h2>
  <p class="lead">AI، یادگیری ماشین و یادگیری عمیق مفاهیم مرتبطی هستند، اما معنی یکسانی ندارند.</p>
