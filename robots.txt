@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bedrouk1.github.io/Bedrouk/sitemap.xml
