@@ -20,12 +20,27 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Bedrouk",
-  "url": "https://bedrouk1.github.io/Bedrouk/",
-  "sameAs": ["https://github.com/Bedrouk1"],
-  "description": "علاقه‌مند به برنامه‌نویسی، Python، هوش مصنوعی و یادگیری ماشین؛ در حال یادگیری و ساخت پروژه‌های شخصی.",
-  "knowsAbout": ["Programming", "Python", "Artificial Intelligence", "Machine Learning", "JavaScript"]
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Bedrouk",
+      "alternateName": "Bedrouk Developer Portfolio",
+      "url": "https://bedrouk1.github.io/Bedrouk/",
+      "inLanguage": "fa",
+      "description": "وب‌سایت شخصی Bedrouk درباره برنامه‌نویسی، Python، هوش مصنوعی و یادگیری ماشین."
+    },
+    {
+      "@type": "Person",
+      "name": "Bedrouk",
+      "url": "https://bedrouk1.github.io/Bedrouk/",
+      "sameAs": [
+        "https://github.com/Bedrouk1",
+        "https://t.me/Bedr0uk"
+      ],
+      "description": "علاقه‌مند به برنامه‌نویسی، Python، هوش مصنوعی و یادگیری ماشین؛ در حال یادگیری و ساخت پروژه‌های شخصی.",
+      "knowsAbout": ["Programming", "Python", "JavaScript", "Artificial Intelligence", "Machine Learning"]
+    }
+  ]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -678,6 +693,7 @@ body:before{position:fixed;inset:-18%;z-index:-2;pointer-events:none;background:
 <section class="page" data-page="academy">
  <span class="eyebrow">THE LEARNING LAB</span><h2>آکادمی <span class="gradient-text">Machine Learning</span></h2>
  <p class="lead">شش تمرین تعاملی برای سنجش یادگیری، به‌علاوه یک جزوه جامع ۱۰ فصلی از مفاهیم پایه تا ساخت و ارزیابی پروژه واقعی.</p>
+ <p><a class="btn primary" href="academy.html">باز کردن صفحه مستقل آکادمی یادگیری ماشین <span class="arrow">↗</span></a></p>
  <div class="academy-layout">
   <aside><div class="glass" style="padding:18px"><div style="display:flex;justify-content:space-between;gap:10px;font-size:12px"><b>پیشرفت یادگیری</b><span id="progressText" style="color:var(--cyan)">۰ از ۶</span></div><div class="progress-shell"><div class="progress-fill" id="progressFill"></div></div></div><div class="lesson-list" id="lessonList" style="margin-top:12px"></div></aside>
   <article class="glass lesson-panel reveal" id="lessonPanel" aria-live="polite"></article>
@@ -877,7 +893,7 @@ print("MAE:", mean_absolute_error(y_test, pred))</code></pre>
  <span class="eyebrow">SELECTED WORK</span><h2>چیزهایی که <span class="gradient-text">می‌سازم</span></h2><p class="lead">پروژه‌ها و تمرین‌هایی که بخشی از مسیر یادگیری و تجربه من هستند.</p>
  <div style="margin-top:28px">
   <article class="project-row reveal"><h3>Empire Wars</h3><p>بازی استراتژی موبایلی با رابط فارسی؛ ساخت امپراتوری، ساختمان‌ها و مدیریت منابع.</p><em>HTML · CSS · JS</em></article>
-  <article class="project-row reveal"><h3>دفترچه Machine Learning</h3><p>درس‌نامه و تمرین‌های پایتون، آماده‌سازی داده و الگوریتم‌های یادگیری ماشین.</p><em>PYTHON · SKLEARN</em></article>
+  <article class="project-row reveal"><h3><a href="academy.html">دفترچه Machine Learning</a></h3><p>درس‌نامه و تمرین‌های پایتون، آماده‌سازی داده و الگوریتم‌های یادگیری ماشین. <a href="academy.html">مشاهده آموزش‌های یادگیری ماشین ↗</a></p><em>PYTHON · SKLEARN</em></article>
   <article class="project-row reveal"><h3>Bedrouk Portfolio</h3><p>وب‌سایت شخصی برای نمایش مسیر یادگیری، پروژه‌ها و محتوای آموزشی.</p><em>HTML · CSS · JS</em></article>
  </div>
  <div class="actions" style="margin-top:30px"><a class="btn primary" href="https://github.com/Bedrouk1" target="_blank" rel="noopener noreferrer">مشاهده GitHub <span class="arrow">↗</span></a></div>
